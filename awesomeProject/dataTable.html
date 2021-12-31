@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2> Order </h2>
+    <table>
+        <tr><td>order_uid: </td><td>{{.OrderUid}}</td></tr>
+        <tr><td>track_number: </td><td>{{.TrackNumber}}</td></tr>
+        <tr><td>entry: </td><td>{{.Entry}}</td></tr>
+        <tr><td>locale: </td><td>{{.Locale}}</td></tr>
+        <tr><td>internal_signature: </td><td>{{.InternalSignature}}</td></tr>
+        <tr><td>customer_id: </td><td>{{.CustomerId}}</td></tr>
+        <tr><td>delivery_service: </td><td>{{.DeliveryService}}</td></tr>
+        <tr><td>shardkey: </td><td>{{.ShardKey}}</td></tr>
+        <tr><td>sm_id:</td><td>{{.SmId}}</td></tr>
+        <tr><td>date_created: </td><td>{{.DateCreated}}</td></tr>
+        <tr><td>oof_shard: </td><td>{{.OofShard}}</td></tr>
+    </table>
+    <h2>Delivery</h2>
+    <table>
+        <tr><td>name: </td><td>{{.Delivery.Name}}</td></tr>
+        <tr><td>phone: </td><td>{{.Delivery.Phone}}</td></tr>
+        <tr><td>zip: </td><td>{{.Delivery.Zip}}</td></tr>
+        <tr><td>city: </td><td>{{.Delivery.City}}</td></tr>
+        <tr><td>address: </td><td>{{.Delivery.Address}}</td></tr>
+        <tr><td>region: </td><td>{{.Delivery.Region}}</td></tr>
+        <tr><td>email: </td><td>{{.Delivery.Email}}</td></tr>
+    </table>
+    <h2>Payment</h2>
+    <table>
+        <tr><td>transaction: </td><td>{{.Payment.Transaction}}</td></tr>
+        <tr><td>request_id: </td><td>{{.Payment.RequestId}}</td></tr>
+        <tr><td>currency: </td><td>{{.Payment.Currency}}</td></tr>
+        <tr><td>provider: </td><td>{{.Payment.Provider}}</td></tr>
+        <tr><td>amount: </td><td>{{.Payment.Amount}}</td></tr>
+        <tr><td>payment_dt: </td><td>{{.Payment.PaymentDt}}</td></tr>
+        <tr><td>bank: </td><td>{{.Payment.Bank}}</td></tr>
+        <tr><td>delivery_cost: </td><td>{{.Payment.DeliveryCost}}</td></tr>
+        <tr><td>goods_total: </td><td>{{.Payment.GoodsTotal}}</td></tr>
+        <tr><td>custom_fee: </td><td>{{.Payment.CustomFee}}</td></tr>
+    </table>
+    <h2>Items</h2>
+    {{range .Items}}
+    <table>
+        <tr><td>rid: </td><td>{{.Rid}}</td></tr>
+        <tr><td>chrt_id: </td><td>{{.ChrtId}}</td></tr>
+        <tr><td>track_number: </td><td>{{.TrackNumber}}</td></tr>
+        <tr><td>price: </td><td>{{.Price}}</td></tr>
+        <tr><td>name: </td><td>{{.Name}}</td></tr>
+        <tr><td>sale: </td><td>{{.Sale}}</td></tr>
+        <tr><td>size: </td><td>{{.Size}}</td></tr>
+        <tr><td>total_price: </td><td>{{.TotalPrice}}</td></tr>
+        <tr><td>nm_id: </td><td>{{.NmId}}</td></tr>
+        <tr><td>brand: </td><td>{{.Brand}}</td></tr>
+        <tr><td>status: </td><td>{{.Status}}</td></tr>
+    </table>
+    {{end}}
+
+
+</body>
+</html>
